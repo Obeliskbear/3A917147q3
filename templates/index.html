@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員資料檢視</title>
+</head>
+<body>
+    <h1>會員資料檢視</h1>
+    <table border="1">
+        <tr>
+            <th>姓名</th>
+            <td>{{ user['nm'] }}</td>
+        </tr>
+        <tr>
+            <th>生日</th>
+            <td>{{ user['birth'] }}</td>
+        </tr>
+        <tr>
+            <th>血型</th>
+            <td>{{ user['blood'] }}</td>
+        </tr>
+        <tr>
+            <th>電話</th>
+            <td>{{ user['phone'] }}</td>
+        </tr>
+        <tr>
+            <th>電子郵件</th>
+            <td>{{ user['email'] }}</td>
+        </tr>
+        <tr>
+            <th>身分證號</th>
+            <td>{{ user['idno'] }}</td>
+        </tr>
+        <tr>
+            <th>密碼</th>
+            <td>{{ user['pwd'] }}</td>
+        </tr>
+    </table>
+    <a href="{{ url_for('edit') }}">修改個人資訊</a>
+    <a href="{{ url_for('logout') }}">登出</a>
+</body>
+</html>

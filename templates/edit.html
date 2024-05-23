@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改個人資訊</title>
+</head>
+<body>
+    <h1>修改個人資訊</h1>
+    <form action="{{ url_for('edit') }}" method="post">
+        <label for="nm">姓名：</label>
+        <input type="text" id="nm" name="nm" value="{{ user['nm'] }}"><br>
+        <label for="birth">生日：</label>
+        <input type="date" id="birth" name="birth" value="{{ user['birth'] }}"><br>
+        <label for="blood">血型：</label>
+        <input type="text" id="blood" name="blood" value="{{ user['blood'] }}"><br>
+        <label for="phone">電話：</label>
+        <input type="text" id="phone" name="phone" value="{{ user['phone'] }}"><br>
+        <label for="email">電子郵件：</label>
+        <input type="email" id="email" name="email" value="{{ user['email'] }}"><br>
+        <label for="idno">身分證號：</label>
+        <input type="text" id="idno" name="idno" value="{{ user['idno'] }}"><br>
+        <label for="pwd">密碼：</label>
+        <input type="password" id="pwd" name="pwd" value="{{ user['pwd'] }}"><br>
+        <input type="submit" value="送出">
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員登入</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>會員登入</h1>
+    <form action="{{ url_for('login') }}" method="post">
+        <label for="idno">身份證號：</label>
+        <input type="text" id="idno" name="idno">
+        <br>
+        <label for="pwd">密碼：</label>
+        <input type="password" id="pwd" name="pwd">
+        <br>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        <input type="submit" value="登入">
+    </form>
+</body>
+</html>
